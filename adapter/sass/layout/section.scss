@@ -1,0 +1,11 @@
+.section {
+ padding: 10vmin 0 2vmin 0;
+}
+
+.hero__title {
+ margin-bottom: 0.5em;
+ @include fFS(30px, 60px, 320px, 1900px, 20px);
+ font-weight: 700;
+ line-height: 1;
+
+}
