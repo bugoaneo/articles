@@ -368,7 +368,11 @@ body {
 
 a {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
+}
+
+a:not(.menu__list a) {
+  color: #FF5F1F;
 }
 
 img {
@@ -488,6 +492,51 @@ p + p {
   }
 }
 
+.section__title {
+  margin-bottom: 0.5em;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+@media (min-width: 320px) {
+  .section__title {
+    font-size: 20px;
+    font-size: calc(0.0094936709 * 100vw + 21.9620253165px);
+  }
+}
+@media (min-width: 1900px) {
+  .section__title {
+    font-size: 40px;
+  }
+}
+
+.section__subtitle {
+  margin-bottom: 0.5em;
+  font-size: 20px;
+}
+@media (min-width: 320px) {
+  .section__subtitle {
+    font-size: 20px;
+    font-size: calc(0.0063291139 * 100vw + 17.9746835443px);
+  }
+}
+@media (min-width: 1900px) {
+  .section__subtitle {
+    font-size: 30px;
+  }
+}
+
+.section__subject {
+  font-style: oblique;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.section__summary {
+  margin: 2em 0;
+}
+
 .menu-trigger {
   display: none;
   padding: 0.5em 0;
@@ -536,5 +585,28 @@ blockquote:after {
 blockquote > * {
   position: relative;
   z-index: 1;
+}
+
+.list {
+  margin: 1em 0;
+}
+.list li {
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+  list-style-position: inside;
+}
+.list li:last-child {
+  margin-bottom: 0;
+}
+.list--disk {
+  list-style: disc;
+}
+.list--square {
+  list-style: square;
+}
+.list--line li:before {
+  content: "—";
+  display: inline-block;
+  margin-right: 0.2em;
 }
 /*# sourceMappingURL=main.css.map */

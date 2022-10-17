@@ -36,3 +36,36 @@ blockquote {
   z-index: 1;
  }
 }
+
+.list {
+ margin: 1em 0;
+
+ li {
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+  list-style-position: inside;
+
+  &:last-child {
+   margin-bottom: 0;
+  }
+ }
+
+ &--disk {
+  list-style: disc;
+
+ }
+
+ &--square {
+  list-style: square;
+ }
+
+ &--line {
+  li {
+   &:before {
+    content: '—';
+    display: inline-block;
+    margin-right: 0.2em;
+   }
+  }
+ }
+}

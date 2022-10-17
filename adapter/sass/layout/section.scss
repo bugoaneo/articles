@@ -9,3 +9,27 @@
  line-height: 1;
 
 }
+
+.section__title {
+ margin-bottom: 0.5em;
+ @include fFS(25px, 40px, 320px, 1900px, 20px);
+ font-weight: 700;
+ line-height: 1;
+ text-align: center;
+}
+
+.section__subtitle {
+ margin-bottom: 0.5em;
+ @include fFS(20px, 30px, 320px, 1900px, 20px);
+}
+
+.section__subject {
+ font-style: oblique;
+ text-align: center;
+ margin-bottom: 1.5em;
+}
+
+
+.section__summary {
+ margin: 2em 0;
+}
