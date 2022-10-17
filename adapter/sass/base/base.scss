@@ -28,7 +28,11 @@ body {
 
 a {
  display: inline-block;
- vertical-align: middle;
+ vertical-align: baseline;
+}
+
+a:not(.menu__list a) {
+ color: $accent;
 }
 
 img {
