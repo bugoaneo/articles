@@ -341,10 +341,12 @@ html {
 
 body {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   line-height: 1;
@@ -355,6 +357,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   overflow: hidden;
@@ -362,6 +365,7 @@ body {
 
 .footer {
   -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
 }
@@ -404,6 +408,7 @@ p + p {
           box-shadow: 0.2em 0 0.2em rgba(5, 5, 5, 0.3);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  z-index: 100;
 }
 @media (max-width: 600px) {
   .menu {
@@ -414,7 +419,6 @@ p + p {
     top: 100%;
     left: 0;
     width: 100%;
-    z-index: 100;
     background-color: rgba(255, 255, 255, 0.35);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
@@ -434,13 +438,16 @@ p + p {
 
 .menu__list {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .menu__list li {
   -webkit-box-flex: 0;
+  -webkit-flex: 0 1 0;
       -ms-flex: 0 1 0px;
           flex: 0 1 0;
 }
@@ -551,10 +558,12 @@ p + p {
 blockquote {
   position: relative;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   max-width: 1000px;
   margin: 1em 0 1em auto;
   padding: 1em;
@@ -608,5 +617,37 @@ blockquote > * {
   content: "—";
   display: inline-block;
   margin-right: 0.2em;
+}
+
+pre {
+  display: inline-block;
+  margin: 1em 0;
+  max-width: 100%;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  background-color: #222;
+  color: #fff;
+  overflow: auto;
+}
+
+.section__codepen {
+  position: relative;
+  margin: 1em 0;
+  aspect-ratio: 1/0.5;
+  resize: horizontal;
+  overflow: hidden;
+}
+.section__codepen > *,
+.section__codepen iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.section__pain-box {
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 0.2em;
+  color: #ec1443;
+  background-color: #ffc8ca;
 }
 /*# sourceMappingURL=main.css.map */
