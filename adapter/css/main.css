@@ -650,4 +650,12 @@ pre {
   color: #ec1443;
   background-color: #ffc8ca;
 }
+
+.section__image {
+  margin: 1.5em 0;
+}
+.section__image img {
+  display: block;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */
