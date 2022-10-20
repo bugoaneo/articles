@@ -109,3 +109,12 @@ pre {
  // background-repeat: space no-repeat;
  background-color: $pain-bg;
 }
+
+.section__image {
+ margin: 1.5em 0;
+
+ img {
+  display: block;
+  width: 100%;
+ }
+}
